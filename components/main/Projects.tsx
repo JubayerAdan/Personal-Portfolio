@@ -12,19 +12,19 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/mystitsu.png"
+          title="Martial Art School"
+          description="it's a martial school website. i used Vite. i used firebase for authentication here and many technologies i used. people can book class, see details about classes and instructors. admin can approve class, delete user, add class and add instructors etc etc"
         />
         <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/bistroboss.png"
+          title="Bistro Boss"
+          description="This website is a website of a resturant. i used firebase, Stripe, and many technologies. people can order food, payment and many things and there is admin feature also"
         />
         <ProjectCard
           src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="Next js Portfolio"
+          description="It's a next js portfolio. i used many modern technologies here like TypeScript, Framer motion, three js and many more"
         />
       </div>
     </div>
