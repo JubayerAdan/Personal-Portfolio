@@ -1,8 +1,33 @@
 import { Socials } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
+  const gradientStyle = {
+    backgroundImage:
+      "linear-gradient(to right, #051937, #1a2b6c, #4e38a0, #9237cb, #e012eb)",
+  };
+  const fileUrl =
+    "https://drive.google.com/u/0/uc?id=1t-giGCcGKHjd5WCuVQMpcBAsDe_xjlwK&export=download";
+  function generateRandomCode() {
+    const currentDate = new Date();
+
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+    const day = String(currentDate.getDate()).padStart(2, "0");
+    const hours = String(currentDate.getHours()).padStart(2, "0");
+    const minutes = String(currentDate.getMinutes()).padStart(2, "0");
+
+    const randomCharacter = String.fromCharCode(
+      65 + Math.floor(Math.random() * 26)
+    ); // Random uppercase letter
+    const randomNumber = Math.floor(Math.random() * 10); // Random single digit
+
+    const code = `${year}${month}${day}_${hours}${minutes}_${randomCharacter}${randomNumber}`;
+
+    return code;
+  }
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
@@ -47,6 +72,18 @@ const Navbar = () => {
               height={24}
             />
           ))}
+
+          <Link
+            href={fileUrl}
+            download={`Resume-${() => generateRandomCode()}.pdf`}
+          >
+            <button
+              className="btn text-white border-none"
+              style={gradientStyle}
+            >
+              Download Resume
+            </button>
+          </Link>
         </div>
       </div>
     </div>
